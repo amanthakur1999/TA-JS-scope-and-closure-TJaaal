@@ -94,3 +94,4 @@ hello.user = 'Sam'; //  invalid
 A Higher-Order function is a function that receives a function as an argument or returns the function as output.
 
 10. Explain what is callback function. Why you can pass a function inside a function?
+Passing a function to another function or passing a function inside another function is known as a Callback Function.

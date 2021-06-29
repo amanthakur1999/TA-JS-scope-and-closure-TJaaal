@@ -3,6 +3,7 @@
 
 2. Where the JavaScript code gets executed?
 Everything in JavaScript happens inside an "Execution Context”.
+//JavaScript Engine
 
 3. What does context means in Global Execution Context?
 It take every piece of and execut in global execution contaext.
@@ -41,7 +42,7 @@ var userMsg = sayHello(user);
 
 <!-- Put your image here -->
 
-![](./image.img1.png)
+![](../image/img1.png)
 
 
 
@@ -59,7 +60,7 @@ var percentageProfit = getPercentage(400, 200);
 
 <!-- Put your image here -->
 
-![](./img/image-name.jpg)
+![](../image/img2.png)
 
 
 
@@ -80,4 +81,4 @@ var whoAmIAgain = customeMessage(12);
 
 <!-- Put your image here -->
 
-![](./img/image-name.jpg)
+![](../image/img3.png)

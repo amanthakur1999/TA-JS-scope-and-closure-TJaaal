@@ -3,7 +3,9 @@
 function multiple (cd){
   return cd(21)
 }
-multiple(function )
+multiple(function inner(num){
+  return num+1
+})
 }
 ```
 2. Create a function by you choice that returns a function reference.

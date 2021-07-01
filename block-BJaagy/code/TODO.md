@@ -1,13 +1,21 @@
 1. Create a function by your choice that accepts a callback function.
 ```js
-function multiple (num,cd){
-  return cd(num)
+function multiple (cd){
+  return cd(21)
 }
-function add (n){
-  return cd + n
+multiple(function )
 }
 ```
 2. Create a function by you choice that returns a function reference.
+```js
+function outer (){
+  function inner(num){
+    return num+1
+  }
+  return inner
+}
+outer();
+```
 
 3. Create a higher order function called `map` that takes two inputs:
    - An array of numbers/string/boolean etc
@@ -39,8 +47,8 @@ multiplyByTwo(2); //-> 4
 
 ```js
 function forEach(array ,cb){
-  for (let i=0; i<str.length;i++){
-      cb( str[i])
+  for (let i=0; i<array.length;i++){
+      cb( array[i])
   };
 }
 

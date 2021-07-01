@@ -86,5 +86,5 @@ console.log(i, 'Second'); // 10 is second
 for (let i = 0; i < 10; i++) {
   console.log(i, 'First'); // first
 }
-console.log(i, 'Second'); // Second
+console.log(i, 'Second'); // ReferenceError: i is not defined
 ```

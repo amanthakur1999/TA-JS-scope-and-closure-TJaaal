@@ -1,5 +1,12 @@
 1. Create a function by your choice that accepts a callback function.
-
+```js
+function multiple (num,cd){
+  return cd(num)
+}
+function add (n){
+  return cd + n
+}
+```
 2. Create a function by you choice that returns a function reference.
 
 3. Create a higher order function called `map` that takes two inputs:
@@ -9,7 +16,15 @@
 Have `map` return a new array filled with values that are the result of the 'callback' function on each element of the input array.
 
 ```js
-// Your code goes here
+function map(str,cb){
+  let arr = []
+  for (let i=0; i<str.length;i++){
+ arr.push(cb( str[i]))
+  }
+
+return arr
+}
+
 
 // Test Your Code
 function multiplyByTwo(n) {
@@ -23,7 +38,11 @@ multiplyByTwo(2); //-> 4
 4. Create a higher-order function called `forEach` taht takes an array and a callback, and runs the callback on each element of the array. `forEach` does not return anything.
 
 ```js
-// Your code goes here
+function forEach(array ,cb){
+  for (let i=0; i<str.length;i++){
+      cb( str[i])
+  };
+}
 
 // Test Your Code
 let alphabet = '';
@@ -37,8 +56,16 @@ console.log(alphabet); //prints 'abcd'
 5. Create higher-order function called `filter` takes an array and a callback, and runs the callback on each element of the array if the return value of callback is `truthy` store in new array return the new array.
 
 ```js
-// Test Your Code
+function filter (array ,cb){
+  let arr = []
+  for(let i=0; i<array.length; i++){
+    if(cb(array[i])){
+      arr.push(array[i])
+    }
+  }
+      return arr
 
+}
 var numbers = [1, 3, 5, 4, 7, 89, 234, 20];
 let even = filter(numbers, function (n) {
   return n % 2 === 0;

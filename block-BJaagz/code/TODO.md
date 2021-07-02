@@ -6,9 +6,9 @@
 
 ```js
 function forEach(array,cb) {
-for (let elem of array){
-  cb(elem)
-}
+arr.reduce((acc,cv,index,arr)=>{
+  cb(cv,index,arr)
+})
 }
 
 forEach(['Sam', 'Jon', 'Arya'], (name, i, arr) =>
@@ -24,12 +24,17 @@ forEach(['Sam', 'Jon', 'Arya'], (name, i, arr) =>
 
 ```js
 function map(array,cb) {
-  let arr =[]
-  for(let elem of array){
-    arr.push(cb(elem))
+  // let arr =[]
+  // for(let elem of array){
+  //   arr.push(cb(elem))
 
-  }
-  return arr
+  // }
+  // return arr
+
+ return array.reduce((acc,cv,i,arr)=>{
+    acc.push(cb(cv,i,arr))
+    return acc;
+  },[])
   
 }
 
@@ -44,13 +49,20 @@ map(['Sam', 'Jon', 'Arya'], (name) => name + name); // ['SamSam', 'JonJon', 'Ary
 
 ```js
 function filter(array,cb) {
-  let arr =[]
-  for(let elem of array){
-    if (cb(elem)){
-    arr.push(elem)
-    }
+  // let arr =[]
+  // for(let elem of array){
+  //   if (cb(elem)){
+  //   arr.push(elem)
+  //   }
+  // }
+  // return arr
+
+return array.reduce((acc,cv,i ,arr)=>{
+  if(cb(cv,i,arr)){
+    acc.push(cv)
   }
-  return arr
+  return acc
+},[]);
 }
 filter(['Sam', 'Jon', 'Arya'], (name) =>
   name.startsWith('S')

@@ -14,7 +14,7 @@ function outer(string){
 2. Write a function `delay` that accepts two arguments, a callback and the wait for the time in milliseconds (1000 ms is 1 second). `delay` should return a function that, when invoked waits for the specified amount of time before executing. (Use setTimeout)
 
 ```js
-function delay(cb,ms){
+ function delay(cb,ms){
   return function(){
     setTimeout(cb,ms)
   }
@@ -100,7 +100,7 @@ The returned function accepts a string `prefix` and returns `prefix` and `title`
 ```js
 function addDesignation(title) {
   return function prefix(prefix){
-    return (prefix , title)
+    return (prefix +" " +title)
   }
 }
 
@@ -121,13 +121,20 @@ manager('Head'); // Head Manager
 ```js
 function changeSalary(slr) {
   return {
-    raise:function (){
+    raise(){
+    return  slr + 500;
+    },
+    lower(){
+      return slr - 500;
+    },
+    current(){
+      return slr
+    }
       
-
 
     }
   }
-}
+
 
 let sam = changeSalary(2000);
 sam.raise(); // 2500
@@ -144,17 +151,28 @@ arya.lower(); // 3500
 
 ```js
 function nameFactory(firstname, lastname){
-  let str = "";
+  // let str = "";
   return {
-    getFullName:function(firstName,lastName){
-      str  += firstname +" "+lastname
-      return str
-    },
+    // getFullName:function(firstName,lastName){
+    //   str  += firstname +" "+lastname
+    //   return str
+    // },
     
-    setFirstName:function(firstName,lastName){
-      str  += firstname +" "+lastname
-      return str
+    // setFirstName:function(firstName,lastName){
+    //   str  += firstname +" "+lastname
+    //   return str
+    // }
+    getFullName(){
+      return `${firstname} ${lastname}`;
     }
+    setfullName(fn){
+      firstName =fn;
+      return `${firstname} ${lastname}`;
+    }
+     setLastName(ln){
+lastName = fn;
+return `${firstname} ${lastname}`;
+     }
   }
 }
 

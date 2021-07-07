@@ -348,5 +348,5 @@ function test (a){
   //Extuction phase
   let num1 =21;
   undefined;
-}
+   }
 ```

@@ -66,7 +66,7 @@ The final output from the third array will be matched agains the same indexed el
 function objOfMatchesWithArray(array1, array2, callback) {
 return array1.reduce((acc,cv,index)=>{
   let value =callback.reduce((acc,cv)=>cv(acc),cv);
-if(value===array2[index]){
+if(value === array2[index]){
   acc[cv]=array2[index]
 }
 return acc
@@ -105,8 +105,8 @@ In the final object the key will be the value form the first array like `hi` and
 ```js
 function objOfMatchesWithArray(array1, array2, callback) {
   return array1.reduce((acc,cv,index)=>{
-    acc[cv]=callback.map((elm)=>elm(cv));
-    return acc
+    acc[cv]=callback.map(elm=>elm(cv));
+    return acc;
   },{})
 }
 
